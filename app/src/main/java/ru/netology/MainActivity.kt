@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
             imageView2.setOnClickListener {
                 post.liked = !post.liked
-                (it as ImageView).setImageResource(getImageResource(post))
+                imageView2.setImageResource(getImageResource(post))
             }
         }
     }
