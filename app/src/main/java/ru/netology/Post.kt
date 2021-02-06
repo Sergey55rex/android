@@ -1,4 +1,7 @@
 package ru.netology
 
-class Post {
-}
+data class Post(
+     val content: String,
+     var liked: Boolean
+
+)
