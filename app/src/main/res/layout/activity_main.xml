@@ -70,7 +70,7 @@
         app:constraint_referenced_ids="content" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageLike"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
@@ -79,17 +79,17 @@
         app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageToSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/imageLike"
         app:layout_constraintStart_toEndOf="@+id/like"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageLike"
         app:srcCompat="@drawable/ic_baseline_share_24" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/common_spacing"
@@ -104,9 +104,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
         android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageLike"
+        app:layout_constraintStart_toEndOf="@+id/imageLike"
+        app:layout_constraintTop_toTopOf="@+id/imageLike" />
 
     <TextView
         android:id="@+id/toSend"
@@ -114,18 +114,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/common_spacing"
         android:text="5"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageToSend"
+        app:layout_constraintStart_toEndOf="@+id/imageToSend"
+        app:layout_constraintTop_toTopOf="@+id/imageToSend" />
 
     <TextView
         android:id="@+id/viewing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="5"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageToSend"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+        app:layout_constraintTop_toTopOf="@+id/imageToSend" />
 
     <androidx.constraintlayout.widget.Group
         android:layout_width="@dimen/common_spacing"

@@ -29,20 +29,20 @@ class MainActivity : AppCompatActivity() {
         with(binding){
             content.text = post.content
 
-            imageView2.setOnClickListener {
+            imageLike.setOnClickListener {
                 post.liked = !post.liked
-                imageView2.setImageResource(getImageResource(post))
+                imageLike.setImageResource(getImageResource(post))
 
                 if (post.liked) post.likes++ else post.likes--
                 like.text = post.likes.toString()
             }
 
-            findViewById<ImageView>(R.id.imageView3).setOnClickListener{
+            imageToSend.setOnClickListener {
                 post.toSends++
                 toSend.text  = calculator(post.toSends)
             }
 
-            findViewById<ImageView>(ru.netology.R.id.imageView4).setOnClickListener{
+            imageViewing.setOnClickListener {
                 post.viewings++
                 viewing.text = calculator(post.viewings)
             }
