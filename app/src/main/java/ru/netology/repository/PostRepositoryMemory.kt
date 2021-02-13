@@ -2,6 +2,7 @@ package ru.netology.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import ru.netology.R
 import ru.netology.dto.Post
 
 class PostRepositoriMemory: PostRepository {
