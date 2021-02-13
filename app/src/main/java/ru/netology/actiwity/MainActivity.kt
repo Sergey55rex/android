@@ -23,11 +23,10 @@ class MainActivity : AppCompatActivity() {
                 published.text = post.published
                 content.text = post.content
 
-                if (post.liked) {
-                    imageLike?.setImageResource(R.drawable.ic_liked_24)
-                }else{
-                    imageLike?.setImageResource(R.drawable.ic_baseline_favorite_border_24)
-                }
+                imageLike.setImageResource(
+                        if (post.liked) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
+                )
+
                 textLike.text = post.likes.toString()
 
                 textToSend.text = calculator(post.toSends)
