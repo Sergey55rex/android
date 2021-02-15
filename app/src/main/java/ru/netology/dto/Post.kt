@@ -1,6 +1,4 @@
-package ru.netology
-
-import android.net.wifi.aware.PublishConfig
+package ru.netology.dto
 
 data class Post(
         val id: Long,
