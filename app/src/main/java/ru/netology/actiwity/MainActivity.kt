@@ -27,24 +27,22 @@ class MainActivity : AppCompatActivity() {
                         if (post.liked) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
                 )
 
-                imageLike.setOnClickListener{
-                    viewModel.like()
-                }
-
                 textLike.text = post.likes.toString()
-
-                imageToSend.setOnClickListener{
-                    viewModel.toSends()
-                }
-
                 textToSend.text = calculator(post.toSends)
-
-                imageViewing.setOnClickListener{
-                    viewModel.viewing()
-                }
-
                 textViewing.text = calculator(post.viewings)
             }
         })
+
+        binding.imageViewing.setOnClickListener{
+            viewModel.viewing()
+        }
+
+        binding.imageToSend.setOnClickListener{
+            viewModel.toSends()
+        }
+
+        binding.imageLike.setOnClickListener{
+            viewModel.like()
+        }
     }
 }
