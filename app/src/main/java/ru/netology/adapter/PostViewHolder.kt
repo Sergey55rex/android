@@ -8,9 +8,7 @@ import ru.netology.utils.Calculator.calculator
 
 class PostViewHolder(
     private val binding: CardPostBinding,
-    private val onLikeListener: OnLikeListener,
-    private val onToSendListener: OnToSendListener,
-    private val onVievingListener: OnVievingListener
+     private val onInter: OnInter,
 ) :RecyclerView.ViewHolder(binding.root) {
     fun bind(post: Post){
         binding.apply {
@@ -21,14 +19,14 @@ class PostViewHolder(
                 if (post.liked) R.drawable.ic_liked_24 else R.drawable.ic_baseline_favorite_border_24
             )
             imageLike.setOnClickListener {
-                onLikeListener(post)
+                onInter.onLikeListener(post)
             }
 
             imageToSend.setOnClickListener {
-                onToSendListener(post)
+                onInter.onToSendListener(post)
             }
             imageViewing.setOnClickListener {
-                onVievingListener(post)
+                onInter.onVievingListener(post)
             }
 
             textLike.text = post.likes.toString()

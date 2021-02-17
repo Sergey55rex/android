@@ -3,6 +3,8 @@ package ru.netology.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import ru.netology.Post
+import ru.netology.adapter.OnInter
 //import ru.netology.adapter.OnLikeListener
 //import ru.netology.adapter.OnToSendListener
 //import ru.netology.adapter.OnVievingListener
@@ -19,12 +21,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val viewModel: PostViewModel by viewModels()
-        val adapter = PostAdapter {
-            viewModel.likeById(it.id)
-            viewModel.toSendsById(it.id)
-            viewModel.viewingById(it.id)
+        val adapter = PostAdapter(object : OnInter {
+            override fun onToSendListener(post: Post) {
+                viewModel.toSendsById(post.id)
+            }
 
-        }
+            override fun onLikeListener(post: Post) {
+                viewModel.likeById(post.id)
+            }
+
+            override fun onVievingListener(post: Post) {
+                viewModel.viewingById(post.id)
+            }
+        })
 
 
         binding.list.adapter = adapter
